@@ -19,11 +19,13 @@ export class LoginServiceService {
 
         localStorage.setItem("token", token);
 
-        //console.info("Token: " + localStorage.getItem("token")); - TESTA PRA IDENTIFICAR O TOKEN GERADO
+        console.info("Token: " + localStorage.getItem("token"));
+        // - TESTA PRA IDENTIFICAR O TOKEN GERADO
 
       },
         error => {
           console.error("Erro ao fazer o Login");
+          alert('Acesso Negado!')
         }
       );
   }
