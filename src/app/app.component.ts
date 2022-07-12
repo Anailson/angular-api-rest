@@ -9,14 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Curso-Angular-Rest';
 
-  usuario = {login: '', senha:''};
-
-  constructor(private loginService: LoginServiceService){}
-
-  public login(){
-
-      this.loginService.login(this.usuario);
-  }
-
 
 }

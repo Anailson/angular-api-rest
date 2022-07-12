@@ -2,6 +2,7 @@ import { AppConstants } from './../app-constants';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { error } from '@angular/compiler/src/util';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { error } from '@angular/compiler/src/util';
 })
 export class LoginServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   login(usuario: any){
 
@@ -21,6 +22,9 @@ export class LoginServiceService {
 
         console.info("Token: " + localStorage.getItem("token"));
         // - TESTA PRA IDENTIFICAR O TOKEN GERADO
+
+        //Navegação
+        this.router.navigate(['home']);
 
       },
         error => {
