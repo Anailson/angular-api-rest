@@ -12,11 +12,11 @@ export class LoginServiceService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  login(usuario: any){
+  login(usuario:any){
 
       return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe(data => {
         /*Retonno Http*/
-        var token = (JSON.parse(JSON.stringify(data)).Authorization.split(' ')[1]);
+        var token = JSON.parse(JSON.stringify(data)).Authorization.split(' ')[1];
 
         localStorage.setItem("token", token);
 
