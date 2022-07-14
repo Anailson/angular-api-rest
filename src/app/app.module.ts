@@ -1,3 +1,4 @@
+import { UsuarioComponent } from './componente/usuario/Usuario/Usuario.component';
 import { NgModule, Component, ModuleWithComponentFactories } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ export const appRouters: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
       {path: '', component: LoginComponent},
+      {path: 'usuarioList', component: UsuarioComponent},
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
@@ -26,7 +28,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
