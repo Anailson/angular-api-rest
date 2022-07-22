@@ -17,10 +17,25 @@ export class UsuarioComponent implements OnInit {
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+     //METODO QUE CARREGA A LISTA
     this.usuarioService.getStudentList().subscribe(data => {
       this.students = data;
       console.log(this.students);
     });
   }
+
+  deleteUsuario(id: Number){
+      this.usuarioService.deletarUsuario(id).subscribe(data =>{
+         console.log("Retorno do método delete : " + data);
+         //METODO QUE CARREGA A LISTA
+         this.usuarioService.getStudentList().subscribe(data => {
+          this.students = data;
+          console.log(this.students);
+        });
+      });
+  }
+
+
+
 
 }

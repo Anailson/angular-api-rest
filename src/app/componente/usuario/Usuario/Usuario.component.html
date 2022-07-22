@@ -6,6 +6,7 @@
       <th scope="col">nome</th>
       <th scope="col">login</th>
       <th scope="col">cpf</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <td>{{student.nome}}</td>
       <td>{{student.login}}</td>
       <td>{{student.cpf}}</td>
+      <td><button (click)="deleteUsuario(student.id)" class="btn btn-primary">Delete</button></td>
     </tr>
   </tbody>
 </table>
