@@ -9,7 +9,6 @@ export class HeaderInterceptorService implements HttpInterceptor {
 
     if(localStorage.getItem('token') != null ){
       const token = 'Bearer ' + localStorage.getItem('token');
-
       const tokenRequest = req.clone({
         headers : req.headers.set('Authorization', token)
       });
@@ -36,3 +35,4 @@ export class HeaderInterceptorService implements HttpInterceptor {
 export class HttpInterceptorModule{
 
 }
+//AULA - Class Model e Service do Usuário

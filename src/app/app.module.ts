@@ -1,7 +1,9 @@
-import { UsuarioComponent } from './componente/usuario/Usuario/Usuario.component';
+//import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
 import { NgModule, Component, ModuleWithComponentFactories } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +21,7 @@ export const appRouters: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
       {path: '', component: LoginComponent},
-      {path: 'usuarioList', component: UsuarioComponent},
+      {path: 'usuarioList', component: UsuarioComponent}
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
@@ -29,7 +31,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     AppComponent,
     HomeComponent,
     LoginComponent,
-    UsuarioComponent
+    UsuarioComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     HttpClientModule,
     routes,
     HttpInterceptorModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
