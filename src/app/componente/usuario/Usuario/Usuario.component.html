@@ -1,4 +1,13 @@
 
+<br/>
+<br/>
+<form class="form-inline">
+ <div class="form-group mx-sm-3 mb-2">
+  <input type="text" class="form-control" [(ngModel)]="nome" id="nome" name="nome" placeholder="Pesquisa por Nome">
+</div>
+<button type="button" (click)="consultarUsuario()"  class="btn btn-success">Buscar</button>
+</form>
+
 <table class="table">
   <thead class="thread-dark">
     <tr>

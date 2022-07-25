@@ -14,6 +14,8 @@ export class UsuarioComponent implements OnInit {
   //students : Observable<User[] >;
   students : User[] ;
 
+  nome: String;
+
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
@@ -35,6 +37,12 @@ export class UsuarioComponent implements OnInit {
       });
   }
 
+  consultarUsuario(){
+    this.usuarioService.consultarUsuario(this.nome).subscribe( data =>{
+        this.students = data;
+
+    });
+  }
 
 
 
